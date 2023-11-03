@@ -21,7 +21,6 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    field :post, resolver: Resolvers::Posts::PostResolver
-    field :posts, resolver: Resolvers::Posts::PostsResolver
+    include Types::Queries::PostQueries
   end
 end
