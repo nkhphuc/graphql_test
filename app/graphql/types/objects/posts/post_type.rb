@@ -9,6 +9,7 @@ module Types
         field :written_year, Int, null: true
         field :created_at, GraphQL::Types::ISO8601DateTime, null: false
         field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
+        field :post_contents, Types::Objects::PostContents::PostContentType.collection_type, null: false
       end
     end
   end
