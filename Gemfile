@@ -75,3 +75,4 @@ gem 'graphql'
 gem "graphiql-rails", group: :development
 gem 'graphql_playground-rails', group: :development
 gem 'graphql-pagination'
+gem 'devise'
