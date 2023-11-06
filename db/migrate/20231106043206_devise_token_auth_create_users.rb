@@ -17,6 +17,13 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[7.0]
       ## Rememberable
       t.datetime :remember_created_at
 
+      ## Trackable
+      t.integer  :sign_in_count, default: 0, null: false
+      t.datetime :current_sign_in_at
+      t.datetime :last_sign_in_at
+      t.string   :current_sign_in_ip
+      t.string   :last_sign_in_ip
+
       ## Confirmable
       t.string   :confirmation_token
       t.datetime :confirmed_at
@@ -30,9 +37,9 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[7.0]
 
       ## User Info
       t.string :name
-      t.string :nickname
+      t.string :user_name
       t.string :image
-      t.string :email
+      t.string :email, null: false, default: ''
 
       ## Tokens
       t.text :tokens
