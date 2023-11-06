@@ -22,5 +22,6 @@ module Types
     # They will be entry points for queries on your schema.
 
     include Types::Queries::PostQueries
+    include Types::Queries::PostContentQueries
   end
 end
