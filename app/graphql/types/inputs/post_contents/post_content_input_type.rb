@@ -2,13 +2,13 @@
 
 module Types
   module Inputs
-    module Posts
-      class PostInputType < Types::BaseInputObject
+    module PostContents
+      class PostContentInputType < Types::BaseInputObject
         argument :id, ID, required: false
-        argument :title, String, required: false
+        argument :part, Integer, required: false
         argument :body, String, required: false
         argument :author, String, required: false
-        argument :written_year, Integer, required: false
+        argument :post_id, Integer, required: false
       end
     end
   end
