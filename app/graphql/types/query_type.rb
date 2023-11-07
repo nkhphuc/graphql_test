@@ -23,10 +23,7 @@ module Types
 
     include Types::Queries::PostQueries
     include Types::Queries::PostContentQueries
+    include Queries::UserQueries
 
-    field :current_user, Types::Objects::Users::UserType, null: true, description: 'The currently logged in user'
-    def current_user
-      context[:current_user]
-    end
   end
 end
