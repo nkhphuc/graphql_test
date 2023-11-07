@@ -12,6 +12,7 @@ class GraphqlController < ApplicationController
     operation_name = params[:operationName]
     context = {
       # Query context goes here, for example:
+      user_signed_in?: user_signed_in?,
       current_user: current_user,
     }
     result = GraphqlTestSchema.execute(query, variables: variables, context: context, operation_name: operation_name)

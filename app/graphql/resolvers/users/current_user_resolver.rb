@@ -7,6 +7,10 @@ module Resolvers
       def resolve
         context[:current_user]
       end
+
+      def self.visible?(context)
+        super && context[:user_signed_in?]
+      end
     end
   end
 end
